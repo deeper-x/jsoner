@@ -5,19 +5,18 @@ pub fn main() !void {
     var gpa = std.heap.GeneralPurposeAllocator(.{ .safety = true }){};
     const allocator = gpa.allocator();
 
-    // const file_path = "./src/assets/in_file.txt";
+    const file_path = "./src/assets/in_file.txt";
 
-    // Writing to a file
-    // try writeFile(file_path, "Hello, Zig!\n");
+    try writeFile(file_path, "Hello, Zig!\n");
 
-    // const content = try readFile(allocator, file_path);
-    // defer allocator.free(content);
+    const content = try readFile(allocator, file_path);
+    defer allocator.free(content);
 
-    // const stdout = std.io.getStdOut().writer();
-    // try stdout.print("File Content: {s}", .{content});
+    const stdout = std.io.getStdOut().writer();
+    try stdout.print("File Content: {s}", .{content});
 
     const large_file = "./src/assets/large_file.txt";
-    // try readBigFile(large_file);
+    try readBigFile(large_file);
 
     try streamBigFile(allocator, large_file, 1024);
 }
@@ -43,21 +42,15 @@ fn readFile(allocator: std.mem.Allocator, file_path: []const u8) ![]u8 {
 }
 
 pub fn readBigFile(file_path: []const u8) !void {
-    // Open file in current working directory
     const file = try std.fs.cwd().openFile(file_path, .{});
     defer file.close();
 
-    // Create a buffered reader
     var buf_reader = std.io.bufferedReader(file.reader());
     var in_stream = buf_reader.reader();
 
-    // Buffer for reading lines
     var buf: [1024]u8 = undefined;
 
-    // Read line by line
     while (try in_stream.readUntilDelimiterOrEof(&buf, '\n')) |line| {
-
-        // Process each line
         try std.io.getStdOut().writer().print("{s}\n", .{line});
     }
 }
@@ -66,22 +59,18 @@ pub fn streamBigFile(allocator: std.mem.Allocator, in_file: []const u8, chunk_si
     const file = try std.fs.cwd().openFile(in_file, .{});
     defer file.close();
 
-    // Get file size
     const file_size = try file.getEndPos();
 
     var buffer = try allocator.alloc(u8, chunk_size);
     defer allocator.free(buffer);
 
-    // Create an ArrayList to store the entire content if needed
     var content = std.ArrayList(u8).init(allocator);
     defer content.deinit();
 
     var total_bytes_read: usize = 0;
     while (total_bytes_read < file_size) {
-        // Calculate how much to read in this iteration
         const bytes_to_read = @min(chunk_size, file_size - total_bytes_read);
 
-        // Read chunk
         const bytes_read = try file.readAll(buffer[0..bytes_to_read]);
         if (bytes_read == 0) break; // End of file
 
@@ -92,12 +81,3 @@ pub fn streamBigFile(allocator: std.mem.Allocator, in_file: []const u8, chunk_si
         try std.io.getStdOut().writer().print("{s}\n", .{buffer});
     }
 }
-
-// fn processChunk(chunk: []const u8) !void {
-//     var newline_count: usize = 0;
-//     for (chunk) |byte| {
-//         if (byte == '\n') newline_count += 1;
-//     }
-
-//     std.debug.print("Found {d} newlines in chunk\n", .{newline_count});
-// }
