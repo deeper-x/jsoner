@@ -1,0 +1,102 @@
+# Sample 100 Line Text File
+
+Line 1: This is a sample text file with 100 lines.
+Line 2: Each line has a unique number and some content.
+Line 3: You can use this file for testing line-by-line processing in Zig.
+Line 4: The file contains various types of content to test parsing capabilities.
+Line 5: Some lines have JSON-like content.
+Line 6: {"id": 6, "type": "message", "content": "This is a JSON object"}
+Line 7: Others have comma-separated values.
+Line 8: 8,value1,value2,value3
+Line 9: While others have plain text with different punctuation!
+Line 10: This line has a number: 42 that could be extracted.
+Line 11: Special characters may appear: @#$%^&*()
+Line 12: Empty lines might occur occasionally.
+Line 13: 
+Line 14: Lines with only whitespace.
+Line 15:     
+Line 16: Lines with Unicode characters: こんにちは 你好 안녕하세요
+Line 17: Some lines might be very short.
+Line 18: L
+Line 19: Or some might be longer with repeating content to simulate larger files with meaningful data that would need to be processed in chunks rather than loading the entire file at once.
+Line 20: {"status": "OK", "count": 20, "message": "Processing ongoing"}
+Line 21: 21,data1,data2,data3,data4
+Line 22: Lines with mixed content - 22 - can have numbers and symbols.
+Line 23: HTTP response codes: 200 OK, 404 Not Found, 500 Server Error
+Line 24: Example email: user24@example.com
+Line 25: A line with a date: 2023-03-25
+Line 26: Sometimes data might have nested structures.
+Line 27: {"user": {"id": 27, "name": "John Doe", "active": true}}
+Line 28: XML-like data: <item id="28"><name>Test Item</name></item>
+Line 29: Tabular data might look like this:
+Line 30: | ID | Name  | Value |
+Line 31: | 31 | Item1 | 100   |
+Line 32: | 32 | Item2 | 200   |
+Line 33: URLs might appear: https://example.com/page33
+Line 34: Some lines might have markdown formatting **like this**.
+Line 35: Code examples: `print("Line 35")`
+Line 36: Environmental variables: PATH=/usr/bin:/usr/local/bin
+Line 37: Configuration settings: max_connections=100
+Line 38: Log entries: [2023-03-38 14:30:45] INFO User logged in
+Line 39: Base64 encoded data: TGluZSAzOQ==
+Line 40: Hexadecimal values: 0x28 (40 in decimal)
+Line 41: Binary data representation: 00101001
+Line 42: The answer to everything.
+Line 43: Quoted text: "This is line 43"
+Line 44: Single quoted text: 'Line 44'
+Line 45: Mathematical expressions: 45 * 2 = 90
+Line 46: Geographical coordinates: 46.5233° N, 4.6542° E
+Line 47: IP addresses: 192.168.47.1
+Line 48: MAC addresses: 48:A1:B2:C3:D4:E5
+Line 49: References to other lines (see Line 42).
+Line 50: We're halfway through the file now.
+Line 51: {"id": 51, "complete": false, "description": "Task in progress"}
+Line 52: Sometimes important information is CAPITALIZED or in *italics*.
+Line 53: Hash values: e53a68c1cdf0a3793d0c6b1b33cd249cea8c45d9
+Line 54: UUIDs: 550e8400-e29b-41d4-a716-446655440054
+Line 55: File paths: /home/user/documents/file55.txt
+Line 56: Command examples: grep "Line 56" sample_file.txt
+Line 57: Version numbers: v5.7.3
+Line 58: MIME types: application/json
+Line 59: HTTP headers: Content-Type: text/html; charset=UTF-8
+Line 60: 60% of the file completed.
+Line 61: HTML tags: <h1>Line 61</h1>
+Line 62: CSS selectors: #line62 .content
+Line 63: JavaScript: console.log("Line 63");
+Line 64: SQL queries: SELECT * FROM table WHERE id = 64;
+Line 65: Color codes: #4169E1 (Royal Blue)
+Line 66: Time values: 66:00:00 (66 hours)
+Line 67: Duration: 67ms
+Line 68: Temperature: 68°F
+Line 69: Regular expressions: ^Line [0-9]+:
+Line 70: Financial data: $70.00
+Line 71: CSV header row: id,name,value,date
+Line 72: 72,Item 72,72.72,2023-04-12
+Line 73: Lines might include emojis 😊
+Line 74: Scientific notation: 7.4e2
+Line 75: Three quarters of the file processed.
+Line 76: Blank line below:
+Line 77: 
+Line 78: Back to content with line 78.
+Line 79: Hexadecimal color: #4F79
+Line 80: 80.5% progress.
+Line 81: Some lines have trailing whitespace.   
+Line 82: While others might have leading whitespace.
+Line 83:    This line has both leading and trailing whitespace.   
+Line 84: Unicode symbols: ♠ ♥ ♦ ♣
+Line 85: Lines with only numbers: 8585858585
+Line 86: {"array": [8, 6, null, true, "string"]}
+Line 87: Lines with escape sequences: Line\tTab\nNewline
+Line 88: Phone numbers: +1 (888) 555-0188
+Line 89: Data with units: 89 kg
+Line 90: 90% complete.
+Line 91: Lines with multiple sentences. This is the second. This is the third.
+Line 92: Bullet points:
+Line 93: • Point 1
+Line 94: • Point 2
+Line 95: • Point 3
+Line 96: Password-like content: p@$$w0rd96
+Line 97: {"status": "almost_done", "remaining": 3}
+Line 98: Approaching the end of the file.
+Line 99: This is the penultimate line.
+Line 100: This is the last line of the sample file.
